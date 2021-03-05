@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Calculator and Date</title>
+	<meta name="robots" content="index, follow">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+	<meta name="keywords" content="Calculator, calculadora, soma, subtração, divisão, multiplicação">
+	<meta name="description" content="Calculadora desenvolvida com intuito de facilitar seus calculos via WEB.">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />	
+	<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+</head>
+<body onload="hours()">
+	<div class="date-calc">		
+		<div class="hour">
+			<i class="fa fa-clock"></i><div class="hours">Hours: 00:00:00</div>
+		</div>
+		<div class="date">
+			<i class="far fa-calendar-alt"></i><div class="current">Date: 00-00-0000</p></div>
+		</div>	
+	</div>
+	<h1 class="title-h1">Calculator JS</h1>
+	<section class="box-section">
+		<div class="box-border">
+			<div class="box-input">
+				<input type="number" name="number" placeholder="0" id="inputs">
+			</div>
+			<div class="box-button">
+				<div class="buttons0">
+					<button type="submit" id="buttonCA">C</button>
+					<button type="submit" id="buttonR">&radic;</button>
+					<button type="submit" id="buttonP">%</button>
+					<button type="submit" id="buttonC">DEL</button>
+				</div>
+				<div class="buttons1">
+					<button type="submit" id="button">7</button>
+					<button type="submit" id="button">8</button>
+					<button type="submit" id="button">9</button>
+					<button type="submit" id="buttonDiv">/</button>
+
+				</div>
+				<div class="buttons2">
+					<button type="submit" id="button">4</button>
+					<button type="submit" id="button">5</button>
+					<button type="submit" id="button">6</button>
+					<button type="submit" id="buttonMult">x</button>
+				</div>
+				<div class="buttons3">
+					<button type="submit" id="button">3</button>
+					<button type="submit" id="button">2</button>
+					<button type="submit" id="button">1</button>
+					<button type="submit" id="buttonSub">-</button>
+				</div>
+				<div class="buttons4">
+					<button type="submit" id="button">0</button>
+					<button type="submit" id="buttonDot">.</button>
+					<button type="submit" id="buttonIg">=</button>
+					<button type="submit" id="buttonSom">+</button>
+				</div>
+			</div>			
+		</div>		
+	</section>
+	<footer>
+		<div class="box-copy">
+			<p>&copy; All right reserved</p>
+		</div>	
+	</footer>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
