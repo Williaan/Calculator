@@ -4,14 +4,27 @@ for(item of buttons){
 	item.addEventListener('click', (event) =>{
 		let key = event.target.innerText;
 		screen.value += key;
-		if (key === 'X') {
-			key = '*';
-		}
+		if (key === 'C') {
+			screen.value = " ";
 
+		}else if (key === '=') {
+			let buttonAll = document.querySelector('#button');
+			screen.value = eval('buttonAll + buttonAll').value;
+
+		};
 
 	});
 
 }
+
+
+
+
+
+
+
+
+
 
 
 
