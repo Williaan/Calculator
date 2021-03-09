@@ -9,7 +9,7 @@ for(item of buttons){
 
 		}else if (key === '=') {
 			let buttonAll = document.querySelector('#button');
-			screen.value = eval('buttonAll + buttonAll').value;
+			screen.value = eval('');
 
 		};
 
