@@ -67,10 +67,8 @@ body{
 }
 #button,#buttonCA,
 #buttonR,#buttonP,
-#buttonC, #buttonDiv,
-#buttonMult, #buttonSub,
-#buttonSom, #buttonDot,
-#buttonIg{
+#buttonOp, #buttonDot,
+#buttonIg, #buttonC{
 	color: #C0C0C0;
 	width: 70px;
 	height: 70px;
@@ -83,8 +81,7 @@ body{
 	font-size: 18px;
 
 }
-#buttonDiv,#buttonSom,
-#buttonMult, #buttonSub,
+#buttonOp,
 #buttonC,#buttonR,#buttonP{
 	color: #FF8C00;
 	font-weight: bold;

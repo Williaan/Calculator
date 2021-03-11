@@ -1,23 +1,55 @@
+
 const screen = document.getElementById('inputs');
-const buttons = document.querySelectorAll('button');
-for(item of buttons){
+const buttons = document.querySelectorAll('#button');
+
+for(item of buttons){ // GET ALL NUMBER BUTTONS
 	item.addEventListener('click', (event) =>{
 		let key = event.target.innerText;
 		screen.value += key;
-		if (key === 'C') {
-			screen.value = " ";
-
-		}else if (key === '=') {
-			let buttonAll = document.querySelector('#button');
-			screen.value = eval('');
-
-		};
 
 	});
 
-}
+};
 
+const buttonOp = document.querySelectorAll('#buttonOp');
+	for(op of buttonOp){ // GET ALL OPERATOR
+		op.addEventListener('click', function(cal){
+			let operator = cal.target.innerText;
+			screen.value += operator;
 
+		});
+
+	};
+
+const buttonCA = document.getElementById('buttonCA');
+buttonCA.addEventListener('click', () => { // FUNCTION BUTTON CLEAN ALL
+	screen.value = " ";
+	
+
+}); 
+
+const buttonIg = document.getElementById('buttonIg');
+buttonIg.addEventListener('click', function(btn){ // FUNCTION BUTTON CALCULATOR
+	let calculator = btn.target.innerText;
+	if (calculator === " ") {
+		console.log("calculator")
+
+	}else{
+		screen.value = eval(screen.value);
+
+	};
+	
+});
+
+const buttonC = document.querySelector('#buttonC');
+buttonC.addEventListener('click', (element) => { // FUNCTION BUTTON CLEAN ONE BY ONE
+	let clean = element.target.innerText;
+	for(let keys = clean.length; keys >= clean.length; keys--){
+		screen.value -= keys;
+
+	};
+
+});
 
 
 
