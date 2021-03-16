@@ -1,12 +1,14 @@
 
-const screen = document.getElementById('inputs');
-const buttons = document.querySelectorAll('#button');
+var screen = document.getElementById('inputs');
+var buttons = document.querySelectorAll('#button');
 
 for(item of buttons){ // GET ALL NUMBER BUTTONS
 	item.addEventListener('click', (event) =>{
-		let key = event.target.innerText;
+		let key = event.target.textContent;
 		screen.value += key;
+		screen.style.color = '#FF8C00';
 
+		
 	});
 
 };
@@ -14,61 +16,66 @@ for(item of buttons){ // GET ALL NUMBER BUTTONS
 const buttonOp = document.querySelectorAll('#buttonOp');
 	for(op of buttonOp){ // GET ALL OPERATOR
 		op.addEventListener('click', function(cal){
-			let operator = cal.target.innerText;
+			let operator = cal.target.textContent;
 			screen.value += operator;
+			screen.style.color = '#FF8C00';
 
 		});
 
 	};
 
 const buttonCA = document.getElementById('buttonCA');
-buttonCA.addEventListener('click', () => { // FUNCTION BUTTON CLEAN ALL
-	screen.value = " ";
+buttonCA.addEventListener('click', (cleanAll) => { // FUNCTION BUTTON CLEAN ALL
+	let all = cleanAll.target.textContent;
+	screen.value = all.substring(0, all.length -1);
 	
 
 }); 
 
-const buttonIg = document.getElementById('buttonIg');
-buttonIg.addEventListener('click', function(btn){ // FUNCTION BUTTON CALCULATOR
-	let calculator = btn.target.innerText;
-	if (calculator === " ") {
-		console.log("calculator")
+const buttonR = document.querySelector('#buttonR');
+buttonR.addEventListener('click',function(raiz){ // FUNCTION BUTTON SQRT
+	let sqrt = raiz.target.textContent;		
+	let screenn = document.getElementById('inputs').value;
+	if (sqrt) {
+		let fixed = Math.sqrt(screenn);
+		screen.value = fixed;
+		screen.style.color = '#FF8C00';
+	}
+	 
+});
 
-	}else{
-		screen.value = eval(screen.value);
+const buttonIg = document.getElementById('buttonIg');
+buttonIg.addEventListener('click', function(cal){ // FUNCTION BUTTON CALCULATOR	
+	let calculator = cal.target.textContent;
+	if (calculator !== undefined) {		
+		screen.value = eval(screen.value)
+		screen.style.color = '#FF8C00';
+
+
+	}else if (calculator === NaN || calculator === undefined ) {
+		screen.value = " "; 
 
 	};
 	
 });
 
-const buttonC = document.querySelector('#buttonC');
-buttonC.addEventListener('click', (element) => { // FUNCTION BUTTON CLEAN ONE BY ONE
-	let clean = element.target.innerText;
-	for(let keys = clean.length; keys >= clean.length; keys--){
-		screen.value -= keys;
-
-	};
-
+const buttonP = document.querySelector('#buttonP');
+buttonP.addEventListener('click', function(pare){
+	let paren = pare.target.textContent;
+	screen.value += paren;
+	screen.style.color = '#FF8C00';
+	
+		
+	
 });
 
+const buttonC = document.querySelector("#buttonC").addEventListener('click', (parent) =>{
+	let parente = parent.target.textContent;
+	screen.value += parente;
+	screen.style.color = '#FF8C00';
+			
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+});
 
 window.addEventListener('load', function () { // FUNCTION FOR DATE 
 	const date = document.querySelector('.current');
